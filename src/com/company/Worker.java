@@ -11,9 +11,10 @@ public class Worker implements OnTaskDoneListener, OnTaskErrorListener {
 
     public void start() {
         for (int i = 0; i < 100; i++) {
-            callback.onDone("Задача " + i + " Выполнена");
             if (i == 33) {
-                errorCallbackl.onError("Задача " + i + " НЕ выполнена!!!!!!!!!!!!!!!!!!!!!");
+                errorCallbackl.onError("Задача " + i + " Ошибка в выполнении!!!!!!!!!!!!!!!!!!!!!");
+            } else {
+                callback.onDone("Задача " + i + " Выполнена");
             }
         }
     }

@@ -1,6 +1,6 @@
 package com.company;
 
-public class Worker implements OnTaskDoneListener, OnTaskErrorListener {
+public class Worker {
     private OnTaskDoneListener callback;
     private OnTaskErrorListener errorCallbackl;
 
@@ -19,13 +19,4 @@ public class Worker implements OnTaskDoneListener, OnTaskErrorListener {
         }
     }
 
-    @Override
-    public void onDone(String result) {
-
-    }
-
-    @Override
-    public void onError(String result) {
-
-    }
 }
